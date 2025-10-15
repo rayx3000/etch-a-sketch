@@ -1,0 +1,33 @@
+body{
+  font-family: "Nunito Sans", sans-serif;;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20vw;
+}
+
+.options-container{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.options-container div{
+  display: flex;
+  flex-direction: column;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container{
+  border: 1px solid;
+  width: 620px;
+  height: 620px;
+}

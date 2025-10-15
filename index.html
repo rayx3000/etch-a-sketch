@@ -5,16 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch A Sketch</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Etch A Sketch</h1>
-    </header>
     <main>
         <div class="options-container">
-            <label for="setGridInput">Set Grid Size</label>
-            <input type="number" id="setGridInput" min="8" max="200" required>
-            <button id="setGridButton">Set Grid</button>
+            <h1>Etch A Sketch</h1>
+            <div>
+                <label for="setGridInput">Set Grid Size</label>
+                <input type="number" id="setGridInput" min="8" max="200" required>
+            </div>
+            <div>
+                <label for="setColor">Set Color</label>
+                <select id="setColor" name="color">
+                    <option value="">Select A Color</option>
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="pink">Pink</option>
+                    <option value="violet">Violet</option>
+                    <option value="torquoise">Torquoise</option>
+                </select>
+            </div>
+            <button id="setGridButton">Set Grid</button>            
         </div>
         <div class="container"></div>
     </main>
