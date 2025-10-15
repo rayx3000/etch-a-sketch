@@ -112,4 +112,11 @@ input::-webkit-inner-spin-button {
   border: 2px solid rgb(5, 50, 112);
   width: 620px;
   height: 620px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.square{
+  background-color: goldenrod;
+  border: 1px solid rgb(5, 50, 112);;
 }
