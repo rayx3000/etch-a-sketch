@@ -1,6 +1,31 @@
 body{
-  font-family: "Nunito Sans", sans-serif;;
+  font-family: "Nunito Sans", sans-serif;
+  background: linear-gradient(45deg, 
+      rgba(244, 255, 176, 1) 0%, 
+      rgba(70, 155, 252, 1) 25%,
+      rgba(244, 255, 176, 1) 50%,
+      rgba(70, 155, 252, 1)  75%,
+      rgba(244, 255, 176, 1) 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
 }
+
+ @keyframes gradientShift {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+ }
 
 main{
     display: flex;
@@ -12,12 +37,45 @@ main{
 .options-container{
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
+}
+
+.options-container h1{
+  font-size: 3.5em;
+  font-family: "Corinthia", cursive;
+  color: rgb(5, 50, 112);
 }
 
 .options-container div{
   display: flex;
   flex-direction: column;
+  font-family: "SUSE Mono", sans-serif;
+}
+
+label{
+  color: rgb(228, 168, 12);
+}
+
+input, select{
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgb(16, 108, 238);
+}
+
+input{
+  width: 20vw;
+}
+
+select{
+  width: 20.8vw;
+}
+
+input:focus, select:focus{
+  outline: none;
+  background-color: rgb(5, 50, 112);
+  color: #fff;
 }
 
 input::-webkit-outer-spin-button,
@@ -26,8 +84,32 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.options-container button{
+  margin-top: 8px;
+  border: none;
+  padding: 5px;
+  width: 100px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(228, 168, 12);
+  font-family: "SUSE Mono", sans-serif;
+  color: rgb(5, 50, 112);
+}
+
+.options-container button:hover{
+  background-color: rgb(5, 50, 112);
+  color: rgb(228, 168, 12);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
+}
+
+.options-container button:active{
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
 .container{
-  border: 1px solid;
+  border: 2px solid rgb(5, 50, 112);
   width: 620px;
   height: 620px;
 }
