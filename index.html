@@ -12,26 +12,29 @@
     <main>
         <div class="options-container">
             <h1>Etch A Sketch</h1>
-            <div>
+            <div class="set-grid-section">
                 <label for="setGridInput">Set Grid Size</label>
                 <input type="number" id="setGridInput" min="2" max="200" required>
             </div>
-            <div>
+            <div class="set-color-section">
                 <label for="setColor">Set Color</label>
                 <select id="setColor" name="color" required>
                     <option disabled selected>Select A Color</option>
-                    <option value="red">Red</option>
-                    <option value="orange">Orange</option>
-                    <option value="yellow">Yellow</option>
-                    <option value="green">Green</option>
-                    <option value="blue">Blue</option>
-                    <option value="pink">Pink</option>
-                    <option value="violet">Violet</option>
-                    <option value="torquoise">Torquoise</option>
-                    <option value="torquoise">Gold</option>
+                    <option value="rgb(255, 0, 0)">Red</option>
+                    <option value="rgb(255, 165, 0)">Orange</option>
+                    <option value="rgb(255, 255, 0)">Yellow</option>
+                    <option value="rgb(0, 192, 0)">Green</option>
+                    <option value="rgb(0, 128, 255)">Blue</option>
+                    <option value="rgb(255,192,203)">Pink</option>
+                    <option value="rgb(127, 0, 255)">Violet</option>
+                    <option value="rgb(64, 224, 208)">Torquoise</option>
+                    <option value="rgb(235,192,0)">Gold</option>
                 </select>
             </div>
-            <button type="submit" id="setGridButton">Set Grid/Reset</button>            
+            <div class="buttons">
+                <button type="submit" id="setGridButton">Set Grid</button>
+                <button id="clearButton">Clear</button>        
+            </div>        
         </div>
         <div class="container"></div>
     </main>

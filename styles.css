@@ -45,9 +45,10 @@ main{
   font-size: 3.5em;
   font-family: "Corinthia", cursive;
   color: rgb(5, 50, 112);
+  margin-bottom: 2px;
 }
 
-.options-container div{
+.set-grid-section, .set-color-section{
   display: flex;
   flex-direction: column;
   font-family: "SUSE Mono", sans-serif;
@@ -84,11 +85,16 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.options-container button{
+.buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.buttons button{
   margin-top: 8px;
   border: none;
-  padding: 5px;
-  width: 150px;
+  padding: 8px;
   text-align: center;
   border-radius: 10px;
   cursor: pointer;
@@ -97,13 +103,13 @@ input::-webkit-inner-spin-button {
   color: rgb(5, 50, 112);
 }
 
-.options-container button:hover{
+.buttons button:hover{
   background-color: rgb(5, 50, 112);
   color: rgb(228, 168, 12);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
 }
 
-.options-container button:active{
+.buttons button:active{
   opacity: 0.8;
   transform: scale(1.1);
 }
@@ -113,7 +119,6 @@ input::-webkit-inner-spin-button {
   width: 620px;
   height: 620px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .square{
