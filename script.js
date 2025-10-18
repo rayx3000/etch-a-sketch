@@ -1,7 +1,7 @@
 const setGridInput = document.getElementById("setGridInput");
 const setColor = document.getElementById("setColor");
 const setGridButton = document.getElementById("setGridButton");
-const container = document.getElementById("container");
+const container = document.querySelector(".container");
 
 setGridButton.addEventListener("click", () => {
     const colorValue = setColor.value;
@@ -18,10 +18,17 @@ setGridButton.addEventListener("click", () => {
     }
 
     const squaredValue = gridInputValue * gridInputValue
+    const frag = document.createDocumentFragment()
     
     for(let x = 0; x < squaredValue; x++){
+        const square = document.createElement("square");
+        square.style.background = colorValue;
+
+        frag.appendChild(square);
         console.log(x);
     }
+
+    container.appendChild(frag);
 
     console.log(colorValue)
 });
