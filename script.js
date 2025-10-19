@@ -5,17 +5,15 @@ const clearButton = document.getElementById("clearButton");
 const container = document.querySelector(".container");
 
 function createGrid() {
-  const colorValue = setColor.value;
+  let colorValue = setColor.value;
   const gridInputValue = parseInt(setGridInput.value, 10);
 
   if (isNaN(gridInputValue) || gridInputValue < 2 || gridInputValue > 200) {
-    console.error("Grid size must be a number between 2 and 200.");
     alert("Grid size must be a number between 2 and 200.");
     return;
   }
 
   if (!colorValue) {
-    console.error("Please choose a color.");
     alert("Please choose a color.");
     return;
   }
@@ -36,17 +34,28 @@ function createGrid() {
     square.setAttribute("aria-label", `Grid cell ${i + 1}`);
 
     frag.appendChild(square);
+
+    let [x, y, z] = colorValue.replace(/[^\d,]/g, '').split(',').map(n => parseInt(n, 10));
+
+    square.addEventListener('mouseenter', () => {
+
+      x -= 20
+      y -= 20
+      z -= 20
+
+      if([x, y, z] < 0)[x, y, z] = 0;
+      
+      square.style.background = `rgb(${x}, ${y}, ${z})`;
+    });
   }
 
   container.appendChild(frag);
-  console.log(`Created ${squaredValue} squares with color ${colorValue}`);
 }
 
 setGridButton.addEventListener("click", createGrid);
 
 clearButton.addEventListener("click", () => {
   container.innerHTML = "";
-  console.log("Grid cleared");
 });
 
 setGridInput.addEventListener("keydown", (e) => {
